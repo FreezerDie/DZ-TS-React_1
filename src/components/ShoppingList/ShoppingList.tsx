@@ -33,8 +33,8 @@ class ShoppingList extends Component<object, ShoppingListState> {
   };
 
   handleDelete = (id: number) => {
-    this.setState((prevState) => ({
-      items: prevState.items.filter((item) => item.id !== id),
+    this.setState((prev) => ({
+      items: prev.items.filter((item) => item.id !== id),
     }));
   };
 
