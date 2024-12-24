@@ -1,5 +1,19 @@
-import React from "react";
+import React, { Component } from "react";
 
-export const ShoppingItem = () => {
-  return <div>ShoppingItem</div>;
-};
+interface ShoppingItemProps {
+  name: string;
+  onDelete: () => void;
+}
+
+class ShoppingItem extends Component<ShoppingItemProps> {
+  render() {
+    return (
+      <li>
+        {this.props.name}
+        <button onClick={this.props.onDelete}>Delete</button>
+      </li>
+    );
+  }
+}
+
+export default ShoppingItem;
